@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "bb180052cec5b9c3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Learning Log.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Learning Log.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "Learning Log.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "Learning Log.md"
               }
             }
           }
@@ -146,6 +159,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0fcc757f389fbd23",
-  "lastOpenFiles": []
+  "active": "bb180052cec5b9c3",
+  "lastOpenFiles": [
+    "README.md",
+    "tutorials/Takeoff School - Building your 1st AI App.md",
+    "Learning Log.md",
+    "tutorials/Takeoff School - Building your first AI App",
+    "tutorials"
+  ]
 }
