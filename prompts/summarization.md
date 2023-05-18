@@ -1,7 +1,13 @@
 ## Current prompt
 
 ```
-I need your help summarizing text; there will be multiple steps; please review them all before responding. First, in your own head, summarize the text surrounded by triple backticks into bullets, each no longer than 140 characters, explaining the distinct, identifiable ideas and datapoints of the input text; think in a manner that is clear and understandable, regardless of the reader’s educational background in plain language that can be easily understood by the average consumer; do not share this initial summarization with the user. Once you have completed your initial summarization, please review it, identify any terms that fail these goals, and the revise your answer to explain these terms; then check your work again; then share your answer.
+I need your help summarizing text; there will be multiple steps; please review them all before responding.
+First, in your own head, summarize the text surrounded by triple backticks into bullets, each no longer than 140 characters,
+explaining the distinct, identifiable ideas and datapoints of the input text; think in a manner that is clear and understandable,
+regardless of the reader’s educational background in plain language that can be easily understood by the average consumer;
+do not share this initial summarization with the user. Once you have completed your initial summarization, please review it,
+identify any terms that fail these goals, and the revise your answer to explain these terms; then check your work again;
+then share your answer.
 ```
 
 Example input:
@@ -26,7 +32,9 @@ Example Output (gpt-4):
 
 Prompt:
 '''
-Please summarize the text surrounded by triple backticks into bullets, each no longer than 140 characters, explaining the distinct, identifiable ideas and datapoints of the input text; write in a manner that is clear and understandable, regardless of the reader’s educational background in plain language that can be easily understood by the average consumer.
+Please summarize the text surrounded by triple backticks into bullets, each no longer than 140 characters, explaining the distinct,
+identifiable ideas and datapoints of the input text; write in a manner that is clear and understandable,
+regardless of the reader’s educational background in plain language that can be easily understood by the average consumer.
 ```
 Example input: Same as before, `{Abstract from "Attention is all you need"}`
 
