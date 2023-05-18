@@ -31,14 +31,17 @@ Example Output (gpt-4):
 #### Initial
 
 Prompt:
-'''
+
+```
 Please summarize the text surrounded by triple backticks into bullets, each no longer than 140 characters, explaining the distinct,
 identifiable ideas and datapoints of the input text; write in a manner that is clear and understandable,
 regardless of the reader’s educational background in plain language that can be easily understood by the average consumer.
 ```
+
 Example input: Same as before, `{Abstract from "Attention is all you need"}`
 
 Example output (`gpt-3.5-turbo`):
+
 ```
 - The dominant models for sequence transduction use complex recurrent or convolutional neural networks in an encoder-decoder setup.
 - The best models use an attention mechanism to connect the encoder and decoder.
@@ -48,6 +51,7 @@ Example output (`gpt-3.5-turbo`):
 - For the WMT 2014 English-to-French translation task, the Transformer model sets a new state-of-the-art BLEU score of 41.8 after training for 3.5 days on eight GPUs, with significantly lower training costs.
 - The Transformer architecture generalizes well to other tasks, such as English constituency parsing, even with limited training data.
 ```
+
 Conclusion:
 * Model + prompt produced inconsistent result
   - Distillation of text to bullets <= 140 characters: success
