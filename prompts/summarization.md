@@ -1,3 +1,12 @@
+Goal: create a summarizer prompt that meets the following goals:
+
+* Summarizes text, regardless of input format (paragraph, bullets) into bullets.
+* Retains all identifiable ideas/facts from input text.
+* Uses vocabulary that is understandable by average readers, regardless of education level or domain expertise.
+* Explains terms that may not be understood by a general audience.
+* Has a clean output that does not require further parsing (i.e. does not prepend "sure! here is your summary!")
+* Conceals internal thought processes
+
 ## Current prompt
 
 ```
