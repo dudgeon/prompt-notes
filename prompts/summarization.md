@@ -1,3 +1,5 @@
+# Basic Summarizer Prompt
+
 Goal: create a summarizer prompt that meets the following goals:
 
 * Summarizes text, regardless of input format (paragraph, bullets) into bullets.
