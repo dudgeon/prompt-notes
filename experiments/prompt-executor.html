@@ -145,7 +145,26 @@
                 Prompt Evaluation: User-driven
             </div>
             <div class="card-body">
-                <p>Provide output feedback.</p>
+                
+                <form>
+
+                    <p>How would you rate the quality of the outputs?</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          Pass
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                        <label class="form-check-label" for="flexRadioDefault2">
+                          Fail
+                        </label>
+                      </div>
+
+                    
+                </form>
+
             </div>
         </div>
 
@@ -159,6 +178,35 @@
                 Prompt Evaluation: LLM-driven
             </div>
             <div class="card-body">
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Test</th>
+                            <th scope="col">Evaluation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Test 1</td>
+                            <td>
+                                <span class="badge text-bg-success">Pass</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Test 2</td>
+                            <td>
+                                <span class="badge text-bg-warning">Indeterminate</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Test 3</td>
+                            <td>
+                                <span class="badge text-bg-danger">Fail</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
                 
             </div>
         </div>
