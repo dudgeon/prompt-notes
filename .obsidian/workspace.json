@@ -161,6 +161,8 @@
   },
   "active": "b86b4d9b8dbe5389",
   "lastOpenFiles": [
+    "prompts/summarization.md",
+    "prompts",
     "experiments/prompt-executor.html",
     "experiments",
     "languages-and-frameworks/LangChain.md",
