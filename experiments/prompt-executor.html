@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  </head>
+
+  <body>
+
+    <div class="container">
+        <h1>Prompt Executor</h1>
+
+        <p>A demo/paper prototype of an execution GUI for a standardized <code>prompt-object</code>.</code></p>
+
+        <!-- Step 1 -->
+        <h3 class="lh-lg">Step 1: User selects prompt</h2>
+            <p>User identifies the location of desired prompt, formatted in standard <code>prompt-object</code> format.</code></p>
+
+        <div class ="card">
+            <div class="card-header">
+                Prompt Selection
+            </div>
+            <div class="card-body">
+                
+                <div class="alert alert-light small" role="alert">
+                    <span class="badge text-bg-secondary">Note</span> In production, the UI would not show the <code>prompt-object</code>; the user would never interact with the object directly. The UI would either pre-load with a selected prompt, or the user would select from a list of available or approved prompts.
+                </div>
+
+                <form>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Paste <code>prompt-object</code>.</label>
+                        <textarea class="form-control form-control-sm" id="input-prompt-object" rows="10"></textarea>
+                    </div>
+                    <button type="button-submit-prompt" class="btn btn-secondary" id="button-load-prompt">Load Prompt</button>
+                </form>
+
+            </div>
+        </div>
+
+        <p> </p>
+        <h3 class="lh-lg">Step 2: User reviews prompt metadata</h3>
+            <p>Prompt executor displays metadata associated with the prompt object, including guidance on usage, objective, and tests.</p>
+            <p>User asserts that their usage conforms to the approved and permissibale usage rules associated with the prompt.</p>
+        </h3>
+
+
+        <div class="card">
+            <div class="card-header">
+                Prompt Metadata
+            </div>
+
+            <div class="card-body">
+
+                <dl class="row">
+                    <dt class="col-sm-3">Name</dt>
+                    <dd class="col-sm-9" id="prompt-name">Prompt name goes here.</dd>
+                    
+                    <dt class="col-sm-3">Description</dt>
+                    <dd class="col-sm-9" id="prompt-description">Prompt description goes here.</dd>
+
+                    <dt class="col-sm-3">Tests</dt>
+                    <dd class="col-sm-9">
+                        <ul id="prompt-tests">
+                            <li>Test 1</li>
+                            <li>Test 2</li>
+                            <li>Test 3</li>
+                        </ul>
+                    </dd>
+
+                    <dt class="col-sm-3">Approved usage</dt>
+                    <dd class="col-sm-9" id="prompt-approved-usage">Prompt approved usage description goes here.</dd>
+
+                    <dt class="col-sm-3">Prohibited usage</dt>
+                    <dd class="col-sm-9" id="prompt-prohibited-usage">Prompt approved usage description goes here.</dd>
+                </dl>
+
+                <form>
+                    <div class="alert alert-warning" role="alert" id="prompt-alert">
+                        <p>Remember: You are responsible and accountable for ensuring that your usage conforms to the approved and prohibited usage rules associated with this prompt.</p>
+                        <p>This session, your login, and associated data will be logged and subject to review.</p>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                        I certify that my usage conforms to the approved and prohibited usage rules associated with this prompt.
+                        </label>
+                    </div>
+                    
+                    <p></p>
+                    <button type="button-accept-terms" class="btn btn-secondary" disabled>Accept Prompt Terms</button>                    
+                </form>
+                
+            </div>
+
+        </div>
+
+        
+        <p></p>
+        <h3 class="lh-lg">Step 3: User provides context, executes prompt</h3>
+        <p>User provides context for the prompt, including any relevant information that may be needed to execute the prompt.</p>
+
+        <div class="card">
+            <div class="card-header">
+                Prompt Context
+            </div>
+            <div class="card-body">
+
+                
+
+                <form>
+                    <div class="mb-3">
+                        <label for="prompt-context" class="form-label">Please enter the text that you would like to process</label>
+                        <textarea class="form-control" id="prompt-context" rows="3"></textarea>
+                    </div>
+                    <button type="button-submit-context" class="btn btn-primary" id="button-submit-prompt">Submit Prompt</button>
+                </form>
+            </div>
+        </div>
+
+        <p></p>
+        <h3 class="lh-lg">Step 4: User receives outputs</h3>
+        <p>User receives outputs from prompt execution.</p>
+
+        <div class="card">
+            <div class="card-header">
+                Prompt Outputs
+            </div>
+            <div class="card-body">
+                <p>Outputs go here.</p>
+            </div>
+        </div>
+
+        <p></p>
+        <h3 class="lh-lg">Step 5: User evaluates outputs</h3>
+
+        <h5 class="lh-lg">Option 1: Human evaluation of outputs</h5>
+        <p>User reviews outputs, and assesses their quality, relative to objective, and relative to <code>prompt-tests</code>.</p>
+
+        <div class="card">
+            <div class="card-header">
+                Prompt Evaluation: User-driven
+            </div>
+            <div class="card-body">
+                <p>Provide output feedback.</p>
+            </div>
+        </div>
+
+
+        <p></p>
+        <h5 class="lh-lg">Option 2: LLM evaluation of outputs</h5>
+        <p>LLM reviews outputs, and assesses their quality, relative to objective, and relative to <code>prompt-tests</code>.</p>
+
+        <div class="card">
+            <div class="card-header">
+                Prompt Evaluation: LLM-driven
+            </div>
+            <div class="card-body">
+                
+            </div>
+        </div>
+
+
+        
+    </div> <!-- end main container -->
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+
+</html>
