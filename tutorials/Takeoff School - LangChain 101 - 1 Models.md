@@ -20,7 +20,35 @@ sk-Sfzdrq9m04mmqD7dS6rCT3BlbkFJU3ySbxrNtLjvA2HIyXRkported model types and integr
 - Agents: An agent is a Chain in which an LLM, given a high-level directive and a set of tools, repeatedly decides an action, executes the action and observes the outcome until the high-level directive is complete.
 - Callbacks: Callbacks let you log and stream the intermediate steps of any chain, making it easy to observe, debug, and evaluate the internals of an application.
 
+### Models
 
+Basic prompt (`01.py`):
+```
+from langchain.llms import OpenAI # specify model provider
+
+llm = OpenAI(model_name="text-curie-001") # select model
+
+result = llm("Write a poem.") # send prompt, get response
+
+print(result)
+```
+
+Promp with multiple generations; returns a list of outputs (02.py):
+```
+from langchain.llms import OpenAI
+
+llm = OpenAI(model_name="text-curie-001", temperature=0.2)
+
+result = llm.generate([ # now executes multiple prompts
+  "Write a poem about fire",
+  "Write a poem about water"
+])
+
+print(result.generations[0][0].text)
+print(len(result.generations))
+```
+
+(03.py):
 
 
 Resulting code from tutorial
