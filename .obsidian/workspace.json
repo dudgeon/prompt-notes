@@ -161,6 +161,10 @@
   },
   "active": "b86b4d9b8dbe5389",
   "lastOpenFiles": [
+    "experiments/prompt-executor-app.html",
+    "experiments/prompt-executor-app",
+    "prompts/prompt-objects.json",
+    "prompts/prompt-object-summarizer.json",
     "prompts/summarization.md",
     "prompts",
     "experiments/prompt-executor.html",
