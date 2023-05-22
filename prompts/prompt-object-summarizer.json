@@ -1,0 +1,15 @@
+{
+    "prompt_name": "Text summarizer",
+    "prompt_objective": "Summarize text into plain-spoken, understandable bullets that preserve the original meaning and information while removing or explaining jargon.",
+    "prompt_instruction": "I need your help summarizing text; there will be multiple steps; please review them all before responding. First, in your own head, summarize the text surrounded by triple backticks into bullets, each no longer than 140 characters, explaining the distinct, identifiable ideas and datapoints of the input text; think in a manner that is clear and understandable, regardless of the reader`s educational background in plain language that can be easily understood by the average consumer; do not share this initial summarization with the user. Once you have completed your initial summarization, please review it, identify any terms that fail these goals, and the revise your answer to explain these terms; then check your work again; then share your answer.",
+    "prompt_tests": [
+        "Summarize text, regardless of input format (paragraph, bullets) into bullets.",
+        "Retains all identifiable ideas/facts from input text.", 
+        "Uses vocabulary that is understandable by average readers, regardless of education level or domain expertise.",
+        "Explains terms that may not be understood by a general audience.", 
+        "Has a clean output that does not require further parsing (i.e. does not prepend 'sure! here is your summary!')", 
+        "Conceals internal thought processes."
+    ],
+    "prompt_approved_usage": "Prompt is only approved to process synthetic data. Prompt may only be used for model evaluation purposes.",
+    "prompt_prohibited_usage": "Prompt may not be used to process company or customer data. Prompt outputse may not be used in any business process, whether customer-facing or internal. Prompt outputs may not be used in any business communications unless labeled, `model evaluation output`."
+}

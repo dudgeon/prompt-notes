@@ -31,13 +31,8 @@
     <main>
     <div class="container py-3">
 
-        <div class="alert alert-light" role="alert">
-          Note: this prototype is static; it is only offered as an illustration of a potential workflow. This prototype does not include functionality to load, execute, or validate prompts.
-        </div>
 
         <!-- Step 1 -->
-        <h3 class="lh-lg">Step 1: User selects prompt</h2>
-            <p>User identifies the location of desired prompt, formatted in standard <code>prompt-object</code> format.</code></p>
 
         <div class ="card">
             <div class="card-header">
@@ -58,23 +53,8 @@
                 <form>
                     <div class="mb-3">
                         <label for="exampleFormControlTextarea1" class="form-label"><code>Prompt-object</code> contents</label>
-                        <!-- Let me just say, I know that the method I used below to jam the prompt object json into the textarea is a horror show. -->
-                        <textarea class="form-control form-control-sm" id="input-prompt-object" rows="10" placeholder='{
-    "prompt_name": "Text summarizer",
-    "prompt_objective": "Summarize text into plain-spoken, understandable bullets that preserve the original meaning and information while removing or explaining jargon.",
-    "prompt_instruction": "I need your help summarizing text; there will be multiple steps; please review them all before responding. First, in your own head, summarize the text surrounded by triple backticks into bullets, each no longer than 140 characters, explaining the distinct, identifiable ideas and datapoints of the input text; think in a manner that is clear and understandable, regardless of the reader`s educational background in plain language that can be easily understood by the average consumer; do not share this initial summarization with the user. Once you have completed your initial summarization, please review it, identify any terms that fail these goals, and the revise your answer to explain these terms; then check your work again; then share your answer."
-    "prompt_tests": [
-        "Summarize text, regardless of input format (paragraph, bullets) into bullets.",
-        "Retains all identifiable ideas/facts from input text.", 
-        "Uses vocabulary that is understandable by average readers, regardless of education level or domain expertise.",
-        "Explains terms that may not be understood by a general audience.", 
-        "Has a clean output that does not require further parsing (i.e. does not prepend "sure! here is your summary!")", 
-        "Conceals internal thought processes"
-    ],
-    "prompt_approved_usage": "Prompt is only approved to process synthetic data. Prompt may only be used for model evaluation purposes.",
-    "prompt_prohibited_usage": "Prompt may not be used to process company or customer data. Prompt outputse may not be used in any business process, whether customer-facing or internal. Prompt outputs may not be used in any business communications unless labeled, `model evaluation output`."
-    
-}'></textarea>
+                        
+                        <textarea class="form-control form-control-sm" id="input-prompt-object" rows="10" placeholder='''></textarea>
                     </div>
                     <button type="button-submit-prompt" class="btn btn-secondary" id="button-load-prompt">Load Prompt</button>
                 </form>
@@ -82,11 +62,7 @@
             </div>
         </div>
 
-        <p> </p>
-        <h3 class="lh-lg">Step 2: User reviews prompt metadata</h3>
-            <p>Prompt executor displays metadata associated with the prompt object, including guidance on usage, objective, and tests.</p>
-            <p>User asserts that their usage conforms to the approved and permissibale usage rules associated with the prompt.</p>
-        </h3>
+        <p></p>
 
 
         <div class="card">
@@ -140,21 +116,15 @@
                 </form>
                 
             </div>
-
         </div>
 
-        
         <p></p>
-        <h3 class="lh-lg">Step 3: User provides context, executes prompt</h3>
-        <p>User provides context for the prompt, including any relevant information that may be needed to execute the prompt.</p>
 
         <div class="card">
             <div class="card-header">
                 Prompt Context
             </div>
             <div class="card-body">
-
-                
 
                 <form>
                     <div class="mb-3">
@@ -163,13 +133,12 @@
                     </div>
                     <button type="button-submit-context" class="btn btn-primary" id="button-submit-prompt">Submit Prompt</button>
                 </form>
+
             </div>
         </div>
 
         <p></p>
-        <h3 class="lh-lg">Step 4: User receives outputs</h3>
-        <p>User receives outputs from prompt execution.</p>
-
+  
         <div class="card">
             <div class="card-header">
                 Prompt Outputs
@@ -180,11 +149,7 @@
         </div>
 
         <p></p>
-        <h3 class="lh-lg">Step 5: User evaluates outputs</h3>
-
-        <h5 class="lh-lg">Option 1: Human evaluation of outputs</h5>
-        <p>User reviews outputs, and assesses their quality, relative to objective, and relative to <code>prompt-tests</code>.</p>
-
+       
         <div class="card">
             <div class="card-header">
                 Prompt Evaluation: User-driven
@@ -249,18 +214,14 @@
                     </div>
 
                     <p></p>
-                    <button type="button-evaluate-prompt-submit" class="btn btn-primary" id="button-evaluate-prompt-submit">Submit</button>
+                    <button type="button-evaluate-prompt-submit" class="btn btn-primary" id="button-evaluate-prompt-submit">Submit Feedback</button>
                 </form>
 
             </div>
         </div>
 
-
         <p></p>
-        <h5 class="lh-lg">Option 2: LLM evaluation of outputs</h5>
-        <p>LLM reviews outputs, and assesses their quality, relative to objective, and relative to <code>prompt-tests</code>.</p>
-        <p>While the example prompt reliably works in production, I have added some <span class="badge text-bg-warning">Indeterminate</span> and <span class="badge text-bg-danger">Fail</span> outputs to highlight different potential UI treatments.</p>
-
+    
         <div class="card">
             <div class="card-header">
                 Prompt Evaluation: LLM-driven
